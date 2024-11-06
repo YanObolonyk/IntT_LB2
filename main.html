@@ -6,16 +6,82 @@
     <title>LB2</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        div {
-            font-size: 150%;
+    h1 {
+      color: darkblue; 
+      font-size: 2em; 
+      text-align: center; 
+    }
 
-        }
+    p {
+      font-family: Arial, sans-serif;
+      line-height: 1.5; 
+      color: #333; 
+    }
+
+    .relative-box {
+      position: relative;
+      width: 300px;
+      height: 200px;
+      background-color: #ffcccb;
+      border: 2px solid #e57373;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .absolute-box {
+      position: absolute;
+      top: 50px;
+      right: 40px;
+      width: 120px;
+      height: 120px;
+      background-color: #4CAF50;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    .fixed-box {
+    font-size: 24px;
+    position: fixed;
+    top: 10px; 
+    right: 20px; 
+    text-align: right;
+}
+
     </style>
 </head>
 <body>
+    <h1>Заголовок сторінки</h1>
+    <p>Відформатовано селектором тегу &lt;p&gt;.</p>
+
+    <div class="container">
+    <p>Виділений <span class="highlight">текст</span> у контейнері за допомогою селектора класів.</p>
+      </div>
+
+    <h2 id="main-title">Заголовок відформатований селектором ідентифікаторів</h2>
+
     <div style="color: orange; background-color: black; text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Laboriosam fugiat voluptas saepe? <br>
         Aperiam magni sequi eum deserunt perspiciatis dignissimos vel molestiae, 
-        suscipit, cupiditate sint iste! Quibusdam esse nemo totam repellendus.</div>
+        suscipit, cupiditate sint iste! Quibusdam esse nemo totam repellendus.</div><br>
+
+    <div class="relative-box">
+        Відносно позиціонований блок (relative)
+            
+            
+    <div class="absolute-box">Абсолютний</div>
+    </div>
+
+    <div class="fixed-box">Фіксований <br>блок</div>
+
+    <div id="footer">
+    ХНУРЕ 2024
+    </div>
+
+    
 </body>
 </html>
