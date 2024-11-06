@@ -50,8 +50,41 @@
     top: 10px; 
     right: 20px; 
     text-align: right;
-}
+    }   
 
+    .float-left {
+      float: left;
+      width: 200px;
+      margin: 0 15px 15px 0; /* Відступ праворуч та знизу */
+      border: 2px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    .responsive-img {
+      width: 100%; /* Ширина зображення займає 100% контейнера */
+      max-width: 800px; /* Максимальна ширина зображення без обмежень */
+      height: auto; /* Зберігає пропорції зображення */
+    }
+
+    /* Медіа-запит для екранів з max-width 1200px */
+    @media (max-width: 1200px) {
+      .responsive-img {
+        max-width: 600px;
+      }
+    }
+
+    /* Медіа-запит для екранів з max-width 800px */
+    @media (max-width: 800px) {
+      .responsive-img {
+        max-width: 400px;
+      }
+    }
     </style>
 </head>
 <body>
@@ -77,6 +110,19 @@
     </div>
 
     <div class="fixed-box">Фіксований <br>блок</div>
+
+    <div class="clearfix">
+        <img src="Bliss_(Windows_XP).png" alt="Зображення зліва" class="float-left">
+        <p>
+          Обтікання текстом зображення, яке знаходиться зліва. Зображення з `float: left` зміщене вліво, і текст обтікає його з правої сторони. Властивість `float` допомагає створювати макети, де елементи розташовані поруч, не займаючи місце в основному потоці документа. 
+        </p>
+        <p>
+          Використання `float` може бути корисним для розміщення медіа, де контент має обтікати медіа-елементи.
+        </p>
+      </div>
+
+      <img src="logo.jpg" alt="Адаптивне зображення" class="responsive-img">
+
 
     <div id="footer">
     ХНУРЕ 2024
