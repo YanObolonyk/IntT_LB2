@@ -47,7 +47,7 @@
     .fixed-box {
     font-size: 24px;
     position: fixed;
-    top: 10px; 
+    bottom: 50px; 
     right: 20px; 
     text-align: right;
     }   
@@ -55,7 +55,7 @@
     .float-left {
       float: left;
       width: 200px;
-      margin: 0 15px 15px 0; /* Відступ праворуч та знизу */
+      margin: 0 15px 15px 0; 
       border: 2px solid #ddd;
       border-radius: 8px;
     }
@@ -67,23 +67,59 @@
     }
 
     .responsive-img {
-      width: 100%; /* Ширина зображення займає 100% контейнера */
-      max-width: 800px; /* Максимальна ширина зображення без обмежень */
-      height: auto; /* Зберігає пропорції зображення */
+      width: 100%; 
+      max-width: 800px; 
+      height: auto; 
     }
-
-    /* Медіа-запит для екранів з max-width 1200px */
+    
     @media (max-width: 1200px) {
       .responsive-img {
         max-width: 600px;
       }
     }
 
-    /* Медіа-запит для екранів з max-width 800px */
     @media (max-width: 800px) {
       .responsive-img {
         max-width: 400px;
       }
+    }
+
+    table {
+      width: 35%;
+      border-collapse: collapse;
+      margin: 0 auto; 
+      text-align: center;
+      font-family: 'Times New Roman';
+      font-size: larger;
+    }
+    
+    th {
+      background-color: #8B0000; 
+      color: #fff; 
+      padding: 10px;
+      font-weight: bold;
+      font-size: 1.2em;
+      border-inline: 2px solid #8B0000;
+    }
+    
+    td {
+      padding: 5px;
+      border-top: 1px solid #8B0000;
+      border-bottom: 1px solid #8B0000;  
+    }
+    
+    td:first-child {
+    border-left: 2px solid #8B0000;
+    text-align: left;
+    }
+
+    td:last-child {
+    border-right: 2px solid #8B0000;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #fff8dc; 
+      border-bottom: solid 2px #8B0000;
     }
     </style>
 </head>
@@ -97,14 +133,8 @@
 
     <h2 id="main-title">Заголовок відформатований селектором ідентифікаторів</h2>
 
-    <div style="color: orange; background-color: black; text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-        Laboriosam fugiat voluptas saepe? <br>
-        Aperiam magni sequi eum deserunt perspiciatis dignissimos vel molestiae, 
-        suscipit, cupiditate sint iste! Quibusdam esse nemo totam repellendus.</div><br>
-
     <div class="relative-box">
         Відносно позиціонований блок (relative)
-            
             
     <div class="absolute-box">Абсолютний</div>
     </div>
@@ -113,21 +143,50 @@
 
     <div class="clearfix">
         <img src="Bliss_(Windows_XP).png" alt="Зображення зліва" class="float-left">
-        <p>
-          Обтікання текстом зображення, яке знаходиться зліва. Зображення з `float: left` зміщене вліво, і текст обтікає його з правої сторони. Властивість `float` допомагає створювати макети, де елементи розташовані поруч, не займаючи місце в основному потоці документа. 
+        <p style="color: green">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem tenetur animi amet. Blanditiis repudiandae quibusdam placeat dolores maiores atque animi facilis tempore, exercitationem, suscipit aliquam ea quos laboriosam aperiam non!
         </p>
-        <p>
-          Використання `float` може бути корисним для розміщення медіа, де контент має обтікати медіа-елементи.
+        <p style="font-family: system-ui; letter-spacing: 2px;">
+          Blanditiis repudiandae quibusdam placeat dolores maiores atque animi facilis tempore, exercitationem, suscipit aliquam ea quos laboriosam aperiam non!
         </p>
       </div>
 
       <img src="logo.jpg" alt="Адаптивне зображення" class="responsive-img">
 
-
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>2017</th>
+            <th>2018</th>
+            <th>2019</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ИТех</td>
+            <td>93</td>
+            <td>97</td>
+            <td>98</td>
+          </tr>
+          <tr>
+            <td>КСх</td>
+            <td>91</td>
+            <td>98</td>
+            <td>97</td>
+          </tr>
+          <tr>
+            <td>СПО</td>
+            <td>96</td>
+            <td>94</td>
+            <td>97</td>
+          </tr>
+        </tbody>
+      </table>
+<br>
     <div id="footer">
     ХНУРЕ 2024
     </div>
 
-    
 </body>
 </html>
